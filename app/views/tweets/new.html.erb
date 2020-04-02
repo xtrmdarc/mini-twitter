@@ -1,2 +1,11 @@
-<h1>Tweets#new</h1>
-<p>Find me in app/views/tweets/new.html.erb</p>
+<div class='container'>
+  <h1> Create a new tweet </h1>
+  <%= flash[:message] %>
+  <%= form_for @tweet do |f| %>
+    <div class="form-group">
+      <%= f.label :content, 'Write your tweet here' %>
+      <%= f.text_area :content, class: 'form-control' %>
+    </div>
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+  <% end %>
+</div>
