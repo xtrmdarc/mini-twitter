@@ -1,0 +1,17 @@
+<div class="container">
+  <%= flash[:message] %>
+  <%= form_for :session, url: login_path do |f| %>
+    
+    <div class="form-group">
+      <%= f.label :username , "Username" %>
+      <%= f.text_field :username, class:'form-control' %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :password , "Password" %>
+      <%= f.password_field :password, class:'form-control' %>
+    </div>
+
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
